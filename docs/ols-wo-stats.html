@@ -5,24 +5,24 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chapter 3 МНК без статистических предпосылок | A Minimal Book Example</title>
-  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <title>Глава 2 МНК без статистических предпосылок | Эконометрика: доказательства</title>
+  <meta name="description" content="Подборка доказательств по метрике. Возможно станет книжкой :)">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Chapter 3 МНК без статистических предпосылок | A Minimal Book Example" />
+  <meta property="og:title" content="Глава 2 МНК без статистических предпосылок | Эконометрика: доказательства" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta property="og:description" content="Подборка доказательств по метрике. Возможно станет книжкой :)" />
   <meta name="github-repo" content="bdemeshev/metrics_proofs" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 МНК без статистических предпосылок | A Minimal Book Example" />
+  <meta name="twitter:title" content="Глава 2 МНК без статистических предпосылок | Эконометрика: доказательства" />
   
-  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="twitter:description" content="Подборка доказательств по метрике. Возможно станет книжкой :)" />
   
 
-<meta name="author" content="Yihui Xie">
+<meta name="author" content="Борис Демешев">
 
 
 <meta name="date" content="2019-03-12">
@@ -130,9 +130,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Эконометрика: доказательства</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="ols-wo-stats.html"><a href="ols-wo-stats.html"><i class="fa fa-check"></i><b>3</b> МНК без статистических предпосылок</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="ols-wo-stats.html"><a href="ols-wo-stats.html"><i class="fa fa-check"></i><b>2</b> МНК без статистических предпосылок</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -145,7 +144,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Эконометрика: доказательства</a>
           </h1>
         </div>
 
@@ -154,7 +153,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="ols_wo_stats" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> МНК без статистических предпосылок</h1>
+<h1><span class="header-section-number">Глава 2</span> МНК без статистических предпосылок</h1>
 <p>Теорема.</p>
 <p>Рассмотрим модель <span class="math inline">\(y=X\beta + u\)</span>.
 С помощью МНК мы получаем оценки коэффициентов <span class="math inline">\(\hat\beta\)</span>, прогнозы <span class="math inline">\(\hat y\)</span> и остатки <span class="math inline">\(\hat u\)</span>. Выполним кросс-валидацию, то есть по очереди будем оценивать модель без первого наблюдения,
@@ -173,18 +172,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Раз уж мы добавили новую точку лежащую ровно на выборочной регрессии, то при оценки модели
 <span class="math inline">\(\hat y^* = X \hat \beta^*\)</span> мы получим в точности старые оценки <span class="math inline">\(\hat \beta^* = \hat \beta^-\)</span>.
 Следовательно, и прогнозы эти две модели дают одинаковые, <span class="math inline">\(\hat y_i^* = \hat y_i^-\)</span>.</p>
-<p>А теперь посмотрим на последний элемент вектора <span class="math inline">\(v = H (y - y^*)\)</span>.</p>
-<p>С одной стороны, он равен последней строке матрицы <span class="math inline">\(H\)</span> умножить на вектор <span class="math inline">\((y- y^*)\)</span>.
-В векторе <span class="math inline">\((y-y^*)\)</span> только последний элемент ненулевой, поэтому <span class="math inline">\(v_n = H_{nn} (y_n - \hat y^{-}_n)\)</span>.</p>
-<p>С другой стороны, мы можем раскрыть скобки, и заметить, что <span class="math inline">\(v = Hy - Hy^*\)</span>.
-И окажется, что <span class="math inline">\(v_n = \hat y_n - \hat y_n^* = \hat y_n - \hat y_n^-\)</span>.</p>
+<p>А теперь посмотрим на последний элемент вектора <span class="math inline">\(v = H (y^* - y)\)</span>.</p>
+<p>С одной стороны, он равен последней строке матрицы <span class="math inline">\(H\)</span> умножить на вектор <span class="math inline">\((y^* - y)\)</span>.
+В векторе <span class="math inline">\((y^* - y)\)</span> только последний элемент ненулевой, поэтому <span class="math inline">\(v_n = H_{nn} (\hat y^{-}_n - y_n)\)</span>.</p>
+<p>С другой стороны, мы можем раскрыть скобки, и заметить, что <span class="math inline">\(v = Hy^* - Hy\)</span>.
+И окажется, что <span class="math inline">\(v_n = \hat y_n^* - \hat y_n = \hat y_n^- - \hat y_n\)</span>.</p>
 <p>Отсюда
 <span class="math display">\[
- \hat y_n - \hat y_n^- = H_{nn} (y_n - \hat y^{-}_n)
+ \hat y_n^- - \hat y_n = H_{nn} (\hat y_n^- - y_n)
 \]</span></p>
-<p>Приводим подобные слагаемые и вычитаем слева и справа <span class="math inline">\(y_n\)</span>, получаем как раз то, что нужно:
+<p>Приводим подобные слагаемые и добавляем слева и справа <span class="math inline">\(y_n\)</span>, получаем как раз то, что нужно:
 <span class="math display">\[
-\hat y_n - y_n  = (1 - H_{ii}) (\hat y_n^- - y_n)
+y_n - \hat y_n   = (1 - H_{ii}) (y_n - \hat y_n^- )
 \]</span></p>
 
 <div id="refs" class="references">
