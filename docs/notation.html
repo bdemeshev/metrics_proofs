@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Эконометрика: доказательства</title>
+  <title>Глава 5 Обозначения | Эконометрика: доказательства</title>
   <meta name="description" content="Подборка доказательств по метрике. Возможно станет книжкой :)">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Эконометрика: доказательства" />
+  <meta property="og:title" content="Глава 5 Обозначения | Эконометрика: доказательства" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="bdemeshev/metrics_proofs" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Эконометрика: доказательства" />
+  <meta name="twitter:title" content="Глава 5 Обозначения | Эконометрика: доказательства" />
   
   <meta name="twitter:description" content="Подборка доказательств по метрике. Возможно станет книжкой :)" />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
+<link rel="prev" href="ols-variance.html">
 
-<link rel="next" href="pca.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -92,27 +92,15 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Эконометрика: доказательства</h1>
-<p class="author"><em>Борис Демешев</em></p>
-<p class="date"><em>2019-03-12</em></p>
-</div>
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">Глава 1</span> Введение</h1>
-<ol style="list-style-type: decimal">
-<li><p>Метод главных компонент и кластеризация</p></li>
-<li><p>МНК без статистических предпосылок</p></li>
-<li><p>МНК и дисперсия</p></li>
-<li><p>МНК и нормальные ошибки</p></li>
-<li><p>МНК и большие выборки</p></li>
-<li><p>Гетероскедастичность</p></li>
-<li><p>Эндогенность</p></li>
-<li><p>Метод максимального правдоподобия</p></li>
-<li><p>Логит и пробит</p></li>
-<li><p>Деревья и леса</p></li>
-<li><p>Временные ряды</p></li>
-<li><p>Немного панельных данных</p></li>
-</ol>
+<div id="notation" class="section level1">
+<h1><span class="header-section-number">Глава 5</span> Обозначения</h1>
+<p><span class="math inline">\(n\)</span> — количество наблюдений</p>
+<p><span class="math inline">\(k\)</span> — количество коэффициентов бета</p>
+<p><span class="math inline">\(y\)</span> — вектор зависимой переменной размера <span class="math inline">\((n\times 1)\)</span></p>
+<p><span class="math inline">\(\beta\)</span> — вектор истинных значений коэффициентов размера <span class="math inline">\((k \times 1)\)</span></p>
+<p><span class="math inline">\(\hat u\)</span> — остатки модели;</p>
+<p><span class="math inline">\(\hat u^{CV}\)</span> — ошибки прогнозов, полученных с помощью кросс-валидации с поочередным выкидыванием отдельных наблюдений;</p>
+<p><span class="math inline">\(H\)</span> — матрица-шляпница, <span class="math inline">\(H = X(X&#39;X)^{-1}X&#39;\)</span></p>
 
 </div>
             </section>
@@ -120,8 +108,8 @@
           </div>
         </div>
       </div>
+<a href="ols-variance.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="pca.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -151,7 +139,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/bdemeshev/metrics_proofs/edit/master/index.Rmd",
+"link": "https://github.com/bdemeshev/metrics_proofs/edit/master/77-notation.Rmd",
 "text": "Edit"
 },
 "history": {

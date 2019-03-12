@@ -40,46 +40,6 @@
 \fi
 \usepackage{natbib}
 \bibliographystyle{apalike}
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -160,9 +120,7 @@
 \tableofcontents
 }
 \hypertarget{intro}{%
-\chapter{Introduction}\label{intro}}
-
-Текущий план:
+\chapter{Введение}\label{intro}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -192,90 +150,36 @@
   Немного панельных данных
 \end{enumerate}
 
-You can label chapter and section titles using \texttt{\{\#label\}} after them, e.g., we can reference Chapter \ref{intro}. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \ref{methods}.
-
-Figures and tables with captions will be placed in \texttt{figure} and \texttt{table} environments, respectively.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{.1}\NormalTok{, }\FloatTok{.1}\NormalTok{))}
-\KeywordTok{plot}\NormalTok{(pressure, }\DataTypeTok{type =} \StringTok{'b'}\NormalTok{, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{01-intro_files/figure-latex/nice-fig-1} 
-
-}
-
-\caption{Here is a nice figure!}\label{fig:nice-fig}
-\end{figure}
-
-Reference a figure by its code chunk label with the \texttt{fig:} prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can reference tables generated from \texttt{knitr::kable()}, e.g., see Table \ref{tab:nice-tab}.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}
-  \KeywordTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\DataTypeTok{caption =} \StringTok{'Here is a nice table!'}\NormalTok{,}
-  \DataTypeTok{booktabs =} \OtherTok{TRUE}
-\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{table}[t]
-
-\caption{\label{tab:nice-tab}Here is a nice table!}
-\centering
-\begin{tabular}{rrrrl}
-\toprule
-Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
-\midrule
-5.1 & 3.5 & 1.4 & 0.2 & setosa\\
-4.9 & 3.0 & 1.4 & 0.2 & setosa\\
-4.7 & 3.2 & 1.3 & 0.2 & setosa\\
-4.6 & 3.1 & 1.5 & 0.2 & setosa\\
-5.0 & 3.6 & 1.4 & 0.2 & setosa\\
-\addlinespace
-5.4 & 3.9 & 1.7 & 0.4 & setosa\\
-4.6 & 3.4 & 1.4 & 0.3 & setosa\\
-5.0 & 3.4 & 1.5 & 0.2 & setosa\\
-4.4 & 2.9 & 1.4 & 0.2 & setosa\\
-4.9 & 3.1 & 1.5 & 0.1 & setosa\\
-\addlinespace
-5.4 & 3.7 & 1.5 & 0.2 & setosa\\
-4.8 & 3.4 & 1.6 & 0.2 & setosa\\
-4.8 & 3.0 & 1.4 & 0.1 & setosa\\
-4.3 & 3.0 & 1.1 & 0.1 & setosa\\
-5.8 & 4.0 & 1.2 & 0.2 & setosa\\
-\addlinespace
-5.7 & 4.4 & 1.5 & 0.4 & setosa\\
-5.4 & 3.9 & 1.3 & 0.4 & setosa\\
-5.1 & 3.5 & 1.4 & 0.3 & setosa\\
-5.7 & 3.8 & 1.7 & 0.3 & setosa\\
-5.1 & 3.8 & 1.5 & 0.3 & setosa\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+\hypertarget{pca}{%
+\chapter{Метод главных компонент}\label{pca}}
 
 \hypertarget{ols_wo_stats}{%
 \chapter{МНК без статистических предпосылок}\label{ols_wo_stats}}
 
-Теорема.
+Определение.
+
+Кросс-валидация с поочередным выкидыванием отдельных наблюдений.
+
+Leave one out cross validation.
 
 Рассмотрим модель \(y=X\beta + u\).
-С помощью МНК мы получаем оценки коэффициентов \(\hat\beta\), прогнозы \(\hat y\) и остатки \(\hat u\). Выполним кросс-валидацию, то есть по очереди будем оценивать модель без первого наблюдения,
-потом без второго, потом без третьего и так далее \(n\) раз.
-Каждый раз будем прогнозировать значение зависимой переменной для выкинутого наблюдения и получим
-вектор кросс-валидационных прогнозов \(\hat y^{CV}\) и вектор ошибок прогнозов \(\hat u^{CV}\).
 
-При этом окажется, что
+Оценим модель без первого наблюдения. Получим МНК-оценки \(\hat\beta^{(-1)}\).
+С помощью этих оценок спрогнозируем первое наблюдение, получим прогноз \(\hat y_1^{CV}\) и ошибку прогноза \(\hat u_1^{CV}\).
+
+Вернём первое наблюдение в выборку и удалим второе наблюдение. Получим МНК-оценки \(\hat\beta^{(-2)}\).
+С помощью этих оценок спрогнозируем второе наблюдение, получим прогноз \(\hat y_2^{CV}\) и ошибку прогноза \(\hat u_2^{CV}\).
+
+Поступим так с каждым наблюдением. На выходе получим вектор кросс-валидационных прогнозов \(\hat y^{CV}\) и вектор кросс-валидационных ошибок прогнозов \(\hat u^{CV}\).
+
+Теорема.
+
+Если модель \(y=X\beta + u\) оценивается с помощью МНК и проводится кросс-валидации с поочередным выкидыванием отдельных наблюдений, то:
+
 \[
 \hat u_i = (1 - H_{ii}) \cdot \hat u_i^{CV},
 \]
-где \(H\) --- матрица-шляпница, \(H = X(X'X)^{-1}X'\).
+где \(H\) --- матрица-шляпница \(H = X(X'X)^{-1}X'\), \(\hat u\) --- остатки регрессии, а \(\hat u^{CV}\) --- кросс-валидационные ошибки прогнозов.
 
 Доказательство.
 
@@ -305,6 +209,90 @@ You can write citations, too. For example, we are using the \textbf{bookdown} pa
 \[
 y_n - \hat y_n   = (1 - H_{ii}) (y_n - \hat y_n^- )
 \]
+
+\hypertarget{ols_variance}{%
+\chapter{МНК и дисперсия}\label{ols_variance}}
+
+Теорема Гаусса-Маркова
+
+Модель \(y = X\beta + u\) оценивается с помощью МНК.
+
+TODO: дописать оставшуюся часть теоремы и доказательства
+
+Доказательство эффективности МНК-оценок.
+
+Эффективность МНК-оценок --- это реинкарнация теоремы Пифагора.
+Мы докажем, что дисперсия МНК-оценки --- это квадрат длины катета,
+дисперсия альтернативной несмещённой оценки --- квадрат длины гипотенузы.
+
+Для примера рассмотрим первый коэффициент бета. Доказательство не меняется ни капли, если рассмотреть произвольную линейную комбинацию коэффициентов бета.
+У нас есть две оценки, \(\hat\beta_1\) и \(\hat\beta_1^{alt}\). Обе они линейны по \(y\),
+следовательно, \(\hat\beta_1 = a'y\) и \(\hat\beta_1^{alt} = a'_{alt} y\).
+
+Замечаем, что \(Var(\hat\beta_1) = \sigma^2 a'a\), и \(Var(\hat\beta_1^{alt}) = \sigma^2 a_{alt}'a_{alt}\). То есть дисперсии пропорциональны квадратм длин векторов \(a\) и \(a^{alt}\).
+Осталось доказать, что вектор \(a\) не длиннее вектора \(a^{alt}\) :)
+
+Для этого мы докажем, что \(a^{alt}\) --- это гипотенуза, а \(a\) --- катет. То есть нужно доказать, что вектор \(a - a^{alt}\) перпендикулярен вектору \(a\).
+
+Разобъём доказательство перпендикулярности \(a\) и \(a-a^{alt}\) на два шага:
+
+Шаг 1. Вектор \(a - a^{alt}\) перпендикулярен любому столбцу матрицы \(X\).
+
+Шаг 2. Вектор \(a\) является линейной комбинацией столбцов матрицы \(X\).
+
+TODO: здесь картинка!
+
+Приступаем к шагу 1. Обе оценки несмещённые, поэтому для любых \(\beta\) должно выполняться:
+
+\[
+E(\hat\beta_1) = E(\hat\beta_1^{alt})
+\]
+
+Переносим всё в левую сторону:
+
+\[
+E((a' - a'_{alt})(X\beta + u)) = 0
+\]
+
+Получаем, что для любых \(\beta\) должно быть выполнено условие:
+
+\[
+(a - a_{alt})'X\beta = 0
+\]
+
+Но это возможно только если вектор \((a - a_{alt})'X\) равен нулю.
+Следовательно, вектор \((a - a_{alt})\) перпендикулярен любому столбцу \(X\).
+
+Приступаем к шагу 2.
+
+Вспоминаем, что \(\hat \beta = (X'X)^{-1}X'y\). Следовательно, нужная строка весов \(a'\) ---
+это первая строка в матрице \((X'X)^{-1}X'\).
+Замечаем, что выражение имеет вид \(A \cdot X'\).
+
+Вспоминаем из линейной алгебры, что при умножении матриц \(AB\) получается матрица \(C\),
+на которую можно взглянуть двумя способами.
+Можно считать, что \(C\) --- это разные линейные комбинации столбцов левой матрицы \(A\),
+а можно считать, что \(C\) --- это разные линейные комбинаций строк правой матрицы \(B\).
+
+Применим второй взгляд :) Получаем, что строка \(a'\) --- линейная комбинация строк матрицы \(X'\).
+Или, другими словами, столбец \(a\) --- линейная комбинация столбцов матрицы \(X\).
+
+\hypertarget{notation}{%
+\chapter{Обозначения}\label{notation}}
+
+\(n\) --- количество наблюдений
+
+\(k\) --- количество коэффициентов бета
+
+\(y\) --- вектор зависимой переменной размера \((n\times 1)\)
+
+\(\beta\) --- вектор истинных значений коэффициентов размера \((k \times 1)\)
+
+\(\hat u\) --- остатки модели;
+
+\(\hat u^{CV}\) --- ошибки прогнозов, полученных с помощью кросс-валидации с поочередным выкидыванием отдельных наблюдений;
+
+\(H\) --- матрица-шляпница, \(H = X(X'X)^{-1}X'\)
 
 \bibliography{book.bib,packages.bib}
 
