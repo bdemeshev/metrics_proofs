@@ -1,7 +1,7 @@
 --- 
 title: "Эконометрика: доказательства"
 author: "Борис Демешев"
-date: "2019-03-12"
+date: "2019-03-13"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
